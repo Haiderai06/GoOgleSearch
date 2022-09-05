@@ -8,32 +8,34 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+// Project Done by Suhail Abbas 
+
 public class GoogleSearchPage {
-	 WebDriver driver;
+	WebDriver driver;
 	String url = "https://www.google.com/";
-	
-  @BeforeTest
-  public void launchApplication	() {
-	  System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-	  driver = new ChromeDriver();
-	  driver.manage().window().maximize();
-	  System.out.println("Window is maximised.");
-	  driver.get(url);
-  }
-  
-  @Test
-  public void search() {
-	  WebElement searchInput = driver.findElement(By.xpath("//input[@title='Search']"));
-	  searchInput.sendKeys("Telus International");
-	  System.out.println("Input is entered.");
-	  WebElement searchBtn = driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']"));
-	  searchBtn.click();
-	  System.out.println("Search button is clicked.");
-  }
-  
-  @AfterTest
-  public void closeApplication() {
-	  driver.close();
-	  System.out.println("Application is closed.");
-  }
+
+	@BeforeTest
+	public void launchApplication	() {
+		System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		System.out.println("Window is maximised.");
+		driver.get(url);
+	}
+
+	@Test
+	public void search() {
+		WebElement searchInput = driver.findElement(By.xpath("//input[@title='Search']"));
+		searchInput.sendKeys("Telus International");
+		System.out.println("Input is entered.");
+		WebElement searchBtn = driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']"));
+		searchBtn.click();
+		System.out.println("Search button is clicked.");
+	}
+
+	@AfterTest
+	public void closeApplication() {
+		driver.close();
+		System.out.println("Application is closed.");
+	}
 }
