@@ -21,6 +21,8 @@ public class GoogleSearchPage {
 		driver.manage().window().maximize();
 		System.out.println("Window is maximised.");
 		driver.get(url);
+		//Code is added by Suhail Abbas
+		System.out.println("Google search page is opened.");
 	}
 
 	@Test
