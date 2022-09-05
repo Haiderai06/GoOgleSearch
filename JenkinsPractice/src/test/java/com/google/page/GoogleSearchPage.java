@@ -31,6 +31,8 @@ public class GoogleSearchPage {
 		WebElement searchBtn = driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']"));
 		searchBtn.click();
 		System.out.println("Search button is clicked.");
+		//added by Suhail Abbas
+		System.out.println("Search result is displayed.");
 	}
 
 	@AfterTest
