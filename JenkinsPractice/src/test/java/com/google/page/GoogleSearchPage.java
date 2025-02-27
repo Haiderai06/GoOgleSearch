@@ -16,13 +16,14 @@ public class GoogleSearchPage {
 
 	@BeforeTest
 	public void launchApplication	() {
-		System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		System.out.println("Window is maximised.");
-		driver.get(url);
-		//Code is added by Ali
-		System.out.println("Google search page is opened.");
+	driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	System.out.println("Window is maximised.");
+	driver.get(url);
+	//Code is added by Ali
+	System.out.println("Google search page is opened.");
 	}
 
 	@Test
