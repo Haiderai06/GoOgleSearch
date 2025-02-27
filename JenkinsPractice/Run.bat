@@ -1,2 +1,2 @@
-cd C:\Users\rajes\Telus\JenkinsPractice
+cd /home/kali/JenkinsPractice
 mvn clean install
